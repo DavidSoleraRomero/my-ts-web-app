@@ -1,0 +1,23 @@
+/* src/styles.css */
+body:not(#input-div, ion-input) {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+ion-card, #input-div {
+    width: 45%;
+    margin: auto;
+}
+
+ion-card, ion-button {
+    margin-top: 20px;
+}
+
+#input-div {
+    margin-top: 15px;
+}
+
+ion-input {
+    width: 50%;
+    text-align: left;
+}
