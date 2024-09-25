@@ -9,6 +9,13 @@ body {
     margin: auto;
 }
 
+#names {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 #input-div {margin: auto;}
 
 ion-card, ion-button {margin-top: 20px;}
