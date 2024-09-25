@@ -1,17 +1,18 @@
 // src/index.ts
-function greet(name: string | null | undefined): void {
-    if (name == null || name == undefined) name = "World"
-    const greeting = `Hello, ${name}!`;
-    const element = document.getElementById("greeting");
-    if (element) {
-      element.innerText = greeting;
-    }
+function displayName(name: string | null | undefined): void {
+    if (name == null || name == undefined) name = "";
+    const card = document.createElement("ion-card");
+    const cardHeader = document.createElement("ion-card-header");
+    const cardTitle = document.createElement("ion-card-title");
+    cardTitle.textContent = name;
+    cardHeader.appendChild(cardTitle);
+    card.appendChild(cardHeader);
+    const wrapper = document.getElementById("wrapper");
+    if (wrapper) wrapper.append(card);
 }
 
 document.getElementById("ionic-button")?.addEventListener('click', function() {
     const ionInput = (document.getElementById("ionic-input") as HTMLInputElement);
-    greet(ionInput.value);
+    displayName(ionInput.value);
     ionInput.value = "";
 });
-
-greet("Anonymous");
